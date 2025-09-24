@@ -5,9 +5,9 @@ Description: Program to prompt a user.
 */
 
 
-
+//pre processor directive
 #include <stdio.h>
-
+//variable declaration
 int main(){
  int height;
  int bankbalance;
@@ -40,3 +40,4 @@ scanf("%d",&bankbalance);
  return 0;
 	
 };
+
