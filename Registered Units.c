@@ -3,13 +3,13 @@ Name: Simon Mwangi Wanjiru
 Reg No: CT101/G/26438/25.
 Description: Program to display units taken.
 */
-
+//pre processor directive
 #include <stdio.h>
 
-
+//variable declaration
 int main(){
 	
-	
+	//student details
 	printf("Name:Simon Mwangi.\n");
 	printf("Registration Number: CT101/G/26438/25\n");
 	
@@ -28,4 +28,5 @@ int main(){
 	return 0;
 	
 	
+
 }
