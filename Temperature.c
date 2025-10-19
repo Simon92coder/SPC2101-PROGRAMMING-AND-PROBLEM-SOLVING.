@@ -16,7 +16,7 @@ float converttocelsius(float fahrenheit);
 
 
 
-
+//Variable declaration 
 void main(){
 	float input, celsius;
 	
@@ -43,5 +43,6 @@ float converttocelsius(float fahrenheit){
 float celsius=(fahrenheit - 32) * 5 / 9;
 return celsius;
 }
+
 
 
