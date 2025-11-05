@@ -1,0 +1,77 @@
+/*
+Name: Simon Mwangi Wanjiru
+Reg No: CT101/G/26438/25
+Date: 11/3/2025
+Description: Program to  keep track of the titles of books borrowed each day.
+File name:  borrowed_books.txt. 
+Library example in use: Nmeema Library. 
+*/
+
+//Preprocessor directives
+#include <stdio.h>
+#include <stdlib.h>
+
+//Main function
+int main(){
+	//Variable declaration
+	char title[100];
+	int day, month, year;
+	FILE* fptr;
+	
+	//Creating the file
+	fptr=fopen("C:\\Users\\pc\\Desktop\\c programs\\borrowed_books.txt", "a");
+	
+	//Checking successful opening of file
+	  if (fptr == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+	
+	//Display message to the console
+	printf("\t\t\t\t\t\tNEEMA LIBRARY.\n");
+	printf("\t\t\t\t=====Borrowed books titles storage program.=====\n\n\n");
+	
+	//Prompt to the librarian to input date of borrowed books entry
+	printf("Please enter date of borrowed book entry:\n");
+	scanf("%d/%d/%d", &day, &month, &year);
+	
+	//clearing buffer input
+	while (getchar() != '\n');
+	
+	printf("Date entered is %d/%d/%d\n", day, month, year);
+	
+    //Prompt to librarian to input book title
+    printf("Enter the title of the borrowed book: ");
+    fgets(title, sizeof(title), stdin);
+	
+	//Confirmation of title input 
+	printf("Book title entered is %s\n", title);
+	
+	//Confirmation of successful storage on console
+	printf("Book title successfully stored in file borrowed_books.txt\n");
+	
+	//Writting to the file
+	
+	//Ttile to records on the file
+	fprintf(fptr, "----------------------------------------------------\n");
+	fprintf(fptr, "\t\t\t\t\t====Neema Library====\n");
+	fprintf(fptr, "====Book Titles Entered====\n");
+	
+	
+	//Writting date and name of borrowed book to file
+	fprintf(fptr, "Date: ");
+	fprintf(fptr, "%d/%d/%d\n\n", day, month, year);
+	fprintf(fptr, "Title: %s", title);
+	
+	
+	
+	fprintf(fptr, "Book title successfully stored.\n");
+	fprintf(fptr, "-----------------------------------------------------\n");
+	
+	
+	//Closing the file
+	fclose(fptr);
+	
+	//Successful execution
+	return 0;
+}
