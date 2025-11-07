@@ -44,11 +44,11 @@ int main() {
         fprintf(fptr, "%.2f\n", sales);
 
         printf("Do you want to enter another sale? (y/n): ");
-        scanf(" %c", &choice); // Note space before %c
+        scanf(" %c", &choice);
 
     } while (choice == 'y' || choice == 'Y');
 
-    // Close the file after writing
+    // Close the file 
     fclose(fptr);
 
     printf("\nTransactions successfully stored in file sales.txt\n");
@@ -73,4 +73,5 @@ int main() {
     fclose(fptr);
 
     return 0;
+
 }
